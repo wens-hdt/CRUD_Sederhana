@@ -138,7 +138,7 @@ public class form_barang extends javax.swing.JFrame {
                 // Mengisi nilai ke dalam query
                 pst.setString(1, txt_idBarang.getText());
                 pst.setString(2, txt_namaBarang.getText());
-                pst.setInt(3, cmb_kategori.getSelectedIndex());
+                pst.setString(3, cmb_kategori.getSelectedItem().toString());
                 pst.setInt(4, Integer.parseInt(txt_qty.getText()));
 
                 // Eksekusi query untuk menyimpan data
@@ -183,7 +183,7 @@ public class form_barang extends javax.swing.JFrame {
 
             // Mengisi nilai ke dalam placeholder yang ada pada query
             pst.setString(1, txt_namaBarang.getText());
-            pst.setInt(2, cmb_kategori.getSelectedIndex());
+            pst.setString(2, cmb_kategori.getSelectedItem().toString());
             pst.setInt(3, Integer.parseInt(txt_qty.getText()));
             pst.setString(4, txt_idBarang.getText());
 
