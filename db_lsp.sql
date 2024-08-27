@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2024 at 06:06 AM
+-- Generation Time: Aug 27, 2024 at 06:17 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -33,6 +33,13 @@ CREATE TABLE `tbl_barang` (
   `kategori` varchar(50) NOT NULL,
   `qty` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_barang`
+--
+
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `kategori`, `qty`) VALUES
+('0001', 'Laptop', 'Elektonik ', 5);
 
 -- --------------------------------------------------------
 
