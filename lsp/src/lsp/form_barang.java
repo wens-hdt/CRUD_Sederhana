@@ -97,8 +97,8 @@ public class form_barang extends javax.swing.JFrame {
                 tbl.addRow(new Object[]{
                     rs.getString("id_barang"), // Mengambil ID Barang
                     rs.getString("nama_barang"), // Mengambil Nama Barang
-                    rs.getString("kategori_barang"), // Mengambil Kategori Barang
-                    rs.getString("jumlah_barang") // Mengambil Jumlah Barang
+                    rs.getString("kategori"), // Mengambil Kategori Barang
+                    rs.getString("qty") // Mengambil Jumlah Barang
                 });
             }
 
@@ -132,7 +132,7 @@ public class form_barang extends javax.swing.JFrame {
 
             try {
                 // Menyiapkan query dengan menggunakan PreparedStatement
-                String query = "INSERT INTO tbl_barang (id_barang, nama_barang, kategori_barang, jumlah_barang) VALUES (?, ?, ?, ?)";
+                String query = "INSERT INTO tbl_barang (id_barang, nama_barang, kategori, qty) VALUES (?, ?, ?, ?)";
                 pst = conn.prepareStatement(query);
 
                 // Mengisi nilai ke dalam query
@@ -174,8 +174,8 @@ public class form_barang extends javax.swing.JFrame {
             // Menyiapkan query SQL dengan menggunakan placeholder untuk nilai yang akan diubah
             String query = "UPDATE tbl_barang SET "
                          + "nama_barang = ?, "
-                         + "kategori_barang = ?, "
-                         + "jumlah_barang = ? "
+                         + "kategori = ?, "
+                         + "qty = ? "
                          + "WHERE id_barang = ?";
 
             // Membuat PreparedStatement untuk query di atas
